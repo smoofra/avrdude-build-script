@@ -15,7 +15,7 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
-OUTPUT_VERSION=6.3.0-arduino9
+OUTPUT_VERSION=6.3.0-arduino14
 
 export OS=`uname -o || uname`
 export TARGET_OS=$OS
@@ -60,9 +60,9 @@ elif [[ $OS == "Msys" || $OS == "Cygwin" ]] ; then
 elif [[ $OS == "Darwin" ]] ; then
 
   export PATH=/opt/local/libexec/gnubin/:/opt/local/bin:$PATH
-  export CC="gcc -arch i386 -mmacosx-version-min=10.5"
-  export CXX="g++ -arch i386 -mmacosx-version-min=10.5"
-  OUTPUT_TAG=i386-apple-darwin11
+  export CC="gcc -mmacosx-version-min=10.14"
+  export CXX="g++ -mmacosx-version-min=10.14"
+  OUTPUT_TAG=x86_64-apple-darwin11
 
 else
 
